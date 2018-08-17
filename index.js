@@ -1363,4 +1363,97 @@ client.on('message', message => {
   } 
 });
 
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+           **__أوامر عامة__**
+
+     **${prefix}server** → معلومات عن سيرفر
+     
+     **${prefix}user** → بعض المعلومات عن حسابك
+      
+     **${prefix}sug** → للاقتراح
+
+     **${prefix}members** → معلومات الاعضاء
+
+     **${prefix}id** → هويتك
+
+     **${prefix}role-info** → معلومات الرتبة المحددة
+
+     **${prefix}avatar** → صورة بروفايلك
+
+    
+     **__أوامر الموسيقى__**
+
+      **${prefix}play** → امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
+
+     **${prefix}stop** → ايقاف الاغنية 
+
+     **${prefix}skip** → امر تخطي الاغنية
+     
+     **${prefix}vol** → تغير مستوى الصوت 1 - 100
+      
+     **${prefix}pause** → ايقاف الاغنية مؤقتا 
+       
+     **${prefix}resume** → امر تكملة الاغنية
+       
+     **${prefix}move** → سحب البوت او ادخال البوت الى روم
+     
+       **__اوامر الادارة__**
+
+      **${prefix}mute** → اسكات شخص
+
+      **${prefix}unmute** → لفك الميوت
+
+      **${prefix}ban** → لاعطاء باند لشخص
+
+      **${prefix}kick** → لطرد عضو
+
+      **${prefix}bc** → ارسال رسالة لجميع اعضاء سيرفر
+      
+      **${prefix}role** →  لسحب او اعطاء رتب لعضو او لكل الاعضاء
+     
+
+      **__اوامر الالعاب__**
+
+      **${prefix}skin** → سكن في ماين كرافت
+
+      **${prefix}عقاب** 
+
+      **${prefix}خواطر** 
+
+      **${prefix}لو خيروك** 
+
+      **${prefix}كت تويت** 
+
+      **${prefix}قرعه** 
+
+      **${prefix}حكم**
+
+      **${prefix}مريم** 
+
+      **${prefix}حب** 
+       
+      **${prefix}صراحه** 
+
+     prefix = ${prefix}
+     ping = ${Date.now() - message.createdTimestamp}
+`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
+    }
+});
+
 client.login(process.env.BOT_TOKEN);

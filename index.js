@@ -1373,4 +1373,4 @@ message.channel.send(image)
      }
     });	
 
-client.login("NDgwMDU5ODU4MjA5NjAzNjA1.DliSKQ.G4NFe-qm9r5JXbj6cUZ4OQURx3w");
+client.login(process.env.BOT_TOKEN);

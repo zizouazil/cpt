@@ -653,7 +653,7 @@ if(message.content.startsWith(prefix + 'sug')) {
    .setDescription(`**
 __المقترح__ :\n <@${ID}>\n
 __الإقتراح__ :  \`\`\`${args.join(" ")}\`\`\`**`)
-           client.channels.get("477602917881348136").send(embed)
+           client.channels.get("480091059154845718").send(embed)
   message.channel.sendEmbed(embet).then(message => {message.delete(50000)})
             message.react("📩")
 }
@@ -930,7 +930,7 @@ const Sra7a = [
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
    client.on('message', message => {
- if (message.content.startsWith('!صراحه')) {
+ if (message.content.startsWith('+صراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
@@ -1002,7 +1002,7 @@ const Za7f = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("!عقاب")) {
+   if (message.content.startsWith("+عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -1058,7 +1058,7 @@ message.channel.sendEmbed(cat);
 ]
 
  client.on('message', message => {
-   if (message.content.startsWith("!كت تويت")) {
+   if (message.content.startsWith("+كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -1086,7 +1086,7 @@ const secreT = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("!خواطر")) {
+   if (message.content.startsWith("+خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -1106,7 +1106,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
  client.on('message', message => {
-   if (message.content.startsWith("!حب")) {
+   if (message.content.startsWith("+حب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -1122,7 +1122,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 console.log('mariam ra7t tmot al nas');
 client.on('ready', () => {
-  console.log(`im redey`);
+  console.log(`im ready`);
 });
 const zead = [
    '*** انا اسمي مريم ***',
@@ -1173,7 +1173,7 @@ const zead = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ]
  client.on('message', message => {
- if (message.content.startsWith('!مريم')) {
+ if (message.content.startsWith('+مريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -1186,7 +1186,7 @@ const zead = [
 
 
 client.on('message', function(message) {
-  var prefix = '!';
+  var prefix = '+';
     if(message.content.startsWith(prefix + 'قرعه')) {
         let args = message.content.split(" ").slice(1);
         if (!args[0]) {
@@ -1229,7 +1229,7 @@ const kingmas = [
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
  client.on('message', message => {
-   var prefix = '!';
+   var prefix = '+';
  if (message.content.startsWith(prefix + 'حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")

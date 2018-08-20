@@ -10,8 +10,8 @@ const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '+';
 
 
-bot.on("guildMemberAdd", member => {
-      const welcomer = bot.channels.get("470667239884980245");
+client.on("guildMemberAdd", member => {
+      const welcomer = client.channels.get("479353367580246016");
       //*let welcomer = member.guild.channels.find("name","welcome");
       if(!welcomer) return;
       if(welcomer) {

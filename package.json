@@ -44,6 +44,7 @@
     "snekfetch": "^3.6.4",
     "sqlite": "^2.9.1",
     "table": "4.0.3",
+    "canvas": "^1.6.11",
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.20.4",
     "zalgolize": "1.2.4"

@@ -44,22 +44,22 @@ client.on('guildMemberAdd',async member => {
           ctx.fontSize = '72px';
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
-          ctx.fillText(member.user.username, 545, 177);
+          ctx.fillText(member.user.username, 825, 630);
          
           ctx.font = '16px Arial Bold';
           ctx.fontSize = '72px';
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
-          ctx.fillText(`${member.guild.memberCount} Members`, 580, 200);
+          ctx.fillText(`${member.guild.memberCount} Members`, 820, 630);
          
           let Avatar = Canvas.Image;
           let ava = new Avatar;
           ava.src = buf;
           ctx.beginPath();
-          ctx.arc(169.5, 148, 126.9, -100, Math.PI * 2, true);
+          ctx.arc(55, 152, 540, 540, Math.PI * 2, true);
           ctx.closePath();
           ctx.clip();
-          ctx.drawImage(ava, 36, 21, 260, 260);
+          ctx.drawImage(ava, 55, 152, 540, 540);
            
           const c = client.channels.get("479353367580246016");
           c.sendFile(canvas.toBuffer());

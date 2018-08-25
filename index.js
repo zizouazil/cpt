@@ -45,7 +45,12 @@ client.on('guildMemberAdd',async member => {
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
           ctx.fillText(member.user.username, 520, 200);
-         
+			    
+          ctx.font = '16px Arial Bold';
+          ctx.fontSize = '72px';
+          ctx.fillStyle = "#ffffff";
+          ctx.textAlign = "center";
+          ctx.fillText(`**Invited By** : ${Invite.inviter}`, 525, 200);         
          
           let Avatar = Canvas.Image;
           let ava = new Avatar;

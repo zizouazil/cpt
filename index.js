@@ -54,7 +54,7 @@ client.on('guildMemberAdd',async member => {
           ctx.arc(169.5, 150, 126.9, -100, Math.PI * 2, true);
           ctx.closePath();
           ctx.clip();
-          ctx.drawImage(ava, 50, 30, 270, 260);
+          ctx.drawImage(ava, 80, 50, 270, 260);
  			
 		  const c = client.channels.get("482853605846810625");
           c.sendFile(canvas.toBuffer());

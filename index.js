@@ -9,6 +9,49 @@ const fetchVideoInfo = require('youtube-info');
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '!';
 
+
+var dat = JSON.parse("{}");
+function forEachObject(obj, func) {
+    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
+}
+client.on("ready", () => {
+    var guild;
+    while (!guild)
+        guild = client.guilds.find("name", "Winter")
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            dat[Inv] = Invite.uses;
+        })
+    })
+})
+client.on("guildMemberAdd", (member) => {
+    let channel = member.guild.channels.find('name', 'winter');
+    if (!channel) {
+        console.log("!channel fails");
+        return;
+    }
+    if (member.id == client.user.id) {
+        return;
+    }
+    console.log('made it till here!');
+    var guild;
+    while (!guild)
+        guild = client.guilds.find("name", "Winter")
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            if (dat[Inv])
+                if (dat[Inv] < Invite.uses) {
+                    console.log(3);
+                    console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
+ channel.send(`**Invited By** : ${Invite.inviter}  `)            
+ }
+            dat[Inv] = Invite.uses;
+        })
+    })
+});
+
 client.on('guildMemberAdd',async member => {
   const Canvas = require('canvas');
   const jimp = require('jimp');
@@ -44,13 +87,8 @@ client.on('guildMemberAdd',async member => {
           ctx.fontSize = '72px';
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
-          ctx.fillText(member.user.username, 520, 200);
-			    
-          ctx.font = '16px Arial Bold';
-          ctx.fontSize = '72px';
-          ctx.fillStyle = "#ffffff";
-          ctx.textAlign = "center";
-          ctx.fillText(`**Invited By** : ${Invite.inviter}`, 525, 200);         
+          ctx.fillText(member.user.username, 520, 200);		    
+			           
          
           let Avatar = Canvas.Image;
           let ava = new Avatar;
@@ -61,7 +99,7 @@ client.on('guildMemberAdd',async member => {
           ctx.clip();
           ctx.drawImage(ava, 30, 21, 260, 260);
  			
-		  const c = client.channels.get("482853605846810625");
+		  const c = client.channels.get("479353367580246016");
           c.sendFile(canvas.toBuffer());
  
 });

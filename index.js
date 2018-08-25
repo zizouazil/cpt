@@ -51,10 +51,10 @@ client.on('guildMemberAdd',async member => {
           let ava = new Avatar;
           ava.src = buf;
           ctx.beginPath();
-          ctx.arc(169.5, 150, 126.9, -100, Math.PI * 2, true);
+          ctx.arc(169.5, 148, 126.9, -100, Math.PI * 2, true);
           ctx.closePath();
           ctx.clip();
-          ctx.drawImage(ava, 10, 15, 270, 260);
+          ctx.drawImage(ava, 30, 21, 260, 260);
  			
 		  const c = client.channels.get("482853605846810625");
           c.sendFile(canvas.toBuffer());

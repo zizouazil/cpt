@@ -44,7 +44,7 @@ client.on('guildMemberAdd',async member => {
           ctx.fontSize = '72px';
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
-          ctx.fillText(member.user.username, 825, 340);
+          ctx.fillText(member.user.username, 340, 825);
          
           ctx.font = '16px Arial Bold';
           ctx.fontSize = '72px';
@@ -59,9 +59,9 @@ client.on('guildMemberAdd',async member => {
           ctx.arc(169.5, 148, 126.9, -100, Math.PI * 2, true);
           ctx.closePath();
           ctx.clip();
-          ctx.drawImage(ava, 36, 21, 260, 260);
+          ctx.drawImage(ava, 511, 508, 50, 27);
  			
-		  const c = client.channels.get("479353367580246016");
+		  const c = client.channels.get("482853605846810625");
           c.sendFile(canvas.toBuffer());
  
 });

@@ -13,8 +13,8 @@ client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('483018550051864577');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`✖ Winter Online ✖: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`✖ Winter Online ✖: ${currentSize}`);
+  if (!size) return channel.setName(`Winter Online [${currentSize}]`);
+  if (currentSize !== size) channel.setName(`Winter Online [${currentSize}]`);
 });
 
 

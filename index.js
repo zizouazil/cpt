@@ -9,7 +9,7 @@ const fetchVideoInfo = require('youtube-info');
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '!';
 
-lient.on('voiceStateUpdate', (old, now) => {
+client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('483018550051864577');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);

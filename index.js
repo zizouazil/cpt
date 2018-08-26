@@ -1388,8 +1388,6 @@ client.on("message", message => {
 
       **__اوامر الالعاب__**
 
-      **${prefix}skin** → سكن في ماين كرافت
-
       **${prefix}عقاب** 
 
       **${prefix}خواطر** 
@@ -1400,9 +1398,7 @@ client.on("message", message => {
 
       **${prefix}قرعه** 
 
-      **${prefix}حكم**
-
-      **${prefix}مريم** 
+      **${prefix}حكم** 
 
       **${prefix}حب** 
        

@@ -10,7 +10,7 @@ const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = 'R';
 
 client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('483018550051864577');
+  const channel = client.channels.get('499213385750282244');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
   if (!size) return channel.setName(`Winter Online [${currentSize}]`);
@@ -95,7 +95,7 @@ client.on('guildMemberAdd',async member => {
           ctx.clip();
           ctx.drawImage(ava, 30, 21, 260, 260);
  			
-		  const c = client.channels.get("479353367580246016");
+		  const c = client.channels.get("499213385750282244");
           c.sendFile(canvas.toBuffer());
  
 });

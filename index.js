@@ -17,6 +17,36 @@ client.on('voiceStateUpdate', (old, now) => {
   if (currentSize !== size) channel.setName(`Winter Online [${currentSize}]`);
 });
 
+		  
+
+ client.on('ready', () => {
+		  client.user.setActivity('Rihaaaaana |Rhelp', {type: 'WATCHING'});
+
+});
+
+
+client.on('message', message => {
+  if (true) {
+if (message.content === 'Rinvite') {
+      message.author.send('*** Rihaaana Link *** || https://discordapp.com/api/oauth2/authorize?client_id=492095280058204161&permissions=8&scope=bot').catch(e => console.log(e.stack));
+
+    }
+   } 
+  });
+
+
+client.on('message', message => {
+     if (message.content === "Rinvite") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
+     
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
 
 client.on('guildMemberAdd',async member => {
   const Canvas = require('canvas');
@@ -1354,6 +1384,7 @@ client.on("message", message => {
 
      **${prefix}avatar** → صورة بروفايلك
 
+    **${prefix}invite** → اتمنا دعمكم للبوت ||  →    لدعوت البوت ||
     
      **__أوامر الموسيقى__**
 

@@ -7,7 +7,8 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = 'R';
+
+var prefix = 'R';
 
 client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('499213385750282244');

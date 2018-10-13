@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '+';
+const prefix = 'R';
 
 client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('483018550051864577');
@@ -888,7 +888,7 @@ client.on('message',async message => {
 });
 client.on('message', message => {
 
-           if (message.content.startsWith(prefix + "id")) {
+           if (message.content === prefix + "id")) {
                      if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
 
                 message.guild.fetchInvites().then(invs => {
@@ -1014,7 +1014,8 @@ const Sra7a = [
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
    client.on('message', message => {
- if (message.content.startsWith('Rصراحه')) {
+	     var prefix = 'R';
+ if (message.content.startsWith(prefix + 'صراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
@@ -1086,7 +1087,8 @@ const Za7f = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("Rعقاب")) {
+	   var prefix = 'R';
+   if (message.content.startsWith(prefix + "عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -1142,6 +1144,8 @@ message.channel.sendEmbed(cat);
 ]
 
  client.on('message', message => {
+	   var prefix = 'R';
+
    if (message.content.startsWith(prefix + "كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
@@ -1170,6 +1174,7 @@ const secreT = [
 
 
  client.on('message', message => {
+	   var prefix = 'R';
    if (message.content.startsWith(prefix + "خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
@@ -1190,6 +1195,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
  client.on('message', message => {
+	   var prefix = 'R';
    if (message.content.startsWith(prefix + "حب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
